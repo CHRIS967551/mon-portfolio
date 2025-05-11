@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Chris</title>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-color: #f2f2f2;
+      --text-color: #333;
+      --section-bg: #fff;
+      --card-bg: white;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #eaeaea;
+      --section-bg: #1e1e1e;
+      --card-bg: #2a2a2a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+      background: var(--section-bg);
+      transition: background 0.5s ease;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    #mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      background: transparent;
+      border: 2px solid var(--text-color);
+      padding: 8px 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      color: var(--text-color);
+      transition: 0.4s;
+    }
+
+    #mode-toggle:hover {
+      background: var(--text-color);
+      color: var(--bg-color);
+    }
+
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: var(--section-bg);
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 99;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #007bff;
+    }
+
+    #accueil {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: #111;
+      color: white;
+    }
+
+    #accueil img {
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+    }
+
+    #accueil img:hover {
+      transform: scale(1.1);
+    }
+
+    #apropos img {
+      width: 180px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .carte-projet {
+      background: var(--card-bg);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      transition: transform 0.3s, background 0.4s;
+    }
+
+    .carte-projet:hover {
+      transform: scale(1.03);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    button[type="submit"] {
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <button id="mode-toggle">Mode Sombre</button>
+  <nav>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="CV-Chris.pdf" download>Télécharger CV</a></li>
+    </ul>
+  </nav>
+
+  <section id="accueil">
+    <img src="CHRIS-removebg-preview.png" alt="Logo Chris" onclick="scrollToApropos()" />
+    <h1>Bienvenue sur mon portfolio</h1>
+  </section>
+
+  <section id="apropos" data-aos="fade-up">
+    <img src="pokemon.jpg.jpg" alt="Photo de moi" />
+    <h1>À propos de moi</h1>
+    <p>
+      Je suis étudiant en informatique, option SLAM (Solutions Logicielles et Applications Métier).
+      Passionné par le développement web, je crée des sites modernes, dynamiques et efficaces.
+    </p>
+  </section>
+
+  <section id="projets" data-aos="fade-up">
+    <h1>Mes projets</h1>
+    <div class="carte-projet">
+      <h2 style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleDetails()">
+        Unité Centrale
+        <span id="arrow" style="transition: transform 0.3s;">▼</span>
+      </h2>
+      <img 
+        src="imagesunite-centrale.jpg.jpg" 
+        alt="Unité centrale" 
+        style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 10px; cursor: pointer;"
+        onclick="toggleDetails()" 
+      >
+      <div id="details" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease; margin-top: 15px;">
+        <div style="margin-bottom: 20px;">
+          <h3>1. Carte Mère</h3>
+          <img src="imagescarte-mere.jpg.jpg" alt="Carte mère" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+          <p>
+            La carte mère peut souffrir de défaillances, mais elle peut aussi être réparée dans certains cas. Si elle est irrémédiablement endommagée, un remplacement est nécessaire.
+          </p>
+        </div>
+        <div>
+          <h3>2. Mémoire RAM</h3>
+          <img src="imagesram-image.jpg.jpg" alt="Mémoire RAM" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+          <p>
+            Si l'ordinateur a des problèmes de performance, de ralentissement ou d'erreurs fréquentes, la mémoire RAM pourrait être défectueuse et doit être testée et, si nécessaire, remplacée.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h1>Contactez-moi</h1>
+    <form action="mailto:pierrendiaye248@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Nom" placeholder="Votre nom" required />
+      <input type="email" name="Email" placeholder="Votre email" required />
+      <textarea name="Message" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+    <footer>© 2025 Chris - Portfolio SLAM</footer>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function scrollToApropos() {
+      document.getElementById("apropos").scrollIntoView({ behavior: "smooth" });
+    }
+
+    const toggleBtn = document.getElementById('mode-toggle');
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark');
+      toggleBtn.textContent = 'Mode Clair';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      const isDark = body.classList.contains('dark');
+      toggleBtn.textContent = isDark ? 'Mode Clair' : 'Mode Sombre';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    function toggleDetails() {
+      const details = document.getElementById("details");
+      const arrow = document.getElementById("arrow");
+
+      if (details.style.maxHeight && details.style.maxHeight !== "0px") {
+        details.style.maxHeight = "0";
+        arrow.style.transform = "rotate(0deg)";
+      } else {
+        details.style.maxHeight = details.scrollHeight + "px";
+        arrow.style.transform = "rotate(180deg)";
+      }
+    }
+  </script>
+
+</body>
+</html>
