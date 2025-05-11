@@ -1,0 +1,238 @@
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(90deg, #333, #555);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+nav {
+    background-color: #444;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff9800;
+}
+
+/* Conteneur principal */
+.container {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container.active {
+    display: block;
+}
+
+/* Section Accueil */
+#accueil {
+    background-image: url('images/photo-1558982423-f8e8a5c75426.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#accueil img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Section À Propos */
+#a-propos {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 1s ease-in-out;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.about-details {
+    flex: 2;
+    text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-details .intro {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.about-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-details ul li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+    position: relative;
+    padding-left: 20px;
+}
+
+.about-details ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #026daf;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.about-details ul li a {
+    color: #026daf;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-details ul li a:hover {
+    color: #e68900;
+    text-decoration: underline;
+}
+
+/* Boutons */
+button {
+    background-color: #026daf;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #e68900;
+    transform: scale(1.1);
+}
+
+/* Listes */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #eee;
+    margin: 0.5rem 0;
+    padding: 0.7rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
