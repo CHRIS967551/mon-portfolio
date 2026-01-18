@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Chris</title>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MODE SOMBRE -->
+  <button id="mode-toggle">Mode Sombre</button>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="CV-Chris.pdf" download>CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ACCUEIL -->
+  <section id="accueil">
+    <img src="Images/logo.png" alt="Logo Chris">
+    <h1 id="typewriter"></h1>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="apropos" data-aos="fade-up">
+    <img src="Images/profile.jpg" alt="Photo de Chris">
+    <h2>À propos de moi</h2>
+    <p>
+      Étudiant en informatique option SLAM, passionné par le développement web.
+      Je crée des sites modernes, dynamiques et responsives.
+    </p>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets">
+    <h2>Mes projets</h2>
+
+    <div class="projets-container">
+
+      <!-- PROJET 1 -->
+      <div class="projet">
+        <img src="Images/projet1.jpg" alt="Unité centrale">
+        <h3>Unité centrale</h3>
+        <p>
+          Projet technique autour du diagnostic matériel :
+          carte mère, mémoire RAM et composants internes.
+        </p>
+
+        <button class="toggle-btn">Voir plus</button>
+
+        <div class="details">
+          <img src="Images/imagescarte-mere.jpg" alt="Carte mère">
+          <img src="Images/imagesram-image.jpg" alt="Mémoire RAM">
+        </div>
+      </div>
+
+      <!-- PROJET 2 -->
+      <div class="projet">
+        <img src="Images/landing-wordpress-1.jpg" alt="Landing WordPress">
+        <img src="Images/landing-wordpress-2.jpg" alt="Landing WordPress">
+
+        <h3>Landing page – Rentrée décalée</h3>
+        <p>
+          Création d’une landing page destinée aux étudiants souhaitant
+          s’inscrire à une rentrée décalée.
+          Projet réalisé en alternance.
+        </p>
+
+        <ul class="tech-list">
+          <li>WordPress</li>
+          <li>Extensions</li>
+          <li>HTML / CSS</li>
+        </ul>
+
+        <a
+          href="https://www.landing.icfa.fr/candidature-rentree-decalee-2/"
+          target="_blank"
+          class="btn-pro"
+        >
+          Voir le site
+        </a>
+      </div>
+
+      <!-- PROJET 3 -->
+      <div class="projet en-cours">
+        <img src="Images/planning-1.jpg" alt="Planning automatisé">
+        <img src="Images/planning-2.jpg" alt="Planning automatisé">
+
+        <h3>Planning automatisé (en cours)</h3>
+        <p>
+          Développement d’un outil permettant de générer automatiquement
+          des plannings de salles pour chaque formation de l’école.
+        </p>
+
+        <ul class="tech-list">
+          <li>Logique algorithmique</li>
+          <li>Base de données</li>
+          <li>Projet en cours</li>
+        </ul>
+
+        <span class="badge">En cours</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section id="competences" data-aos="fade-up">
+    <h2>Compétences</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-block">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>HTML / CSS</h3>
+          <span class="level advanced">Avancé</span>
+          <p>Création de sites modernes, responsive et animés.</p>
+        </div>
+      </div>
+
+      <div class="timeline-block">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>JavaScript</h3>
+          <span class="level intermediate">Intermédiaire</span>
+          <p>Animations, interactions, DOM, logique front-end.</p>
+        </div>
+      </div>
+
+      <div class="timeline-block">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>PHP / MySQL</h3>
+          <span class="level intermediate">Intermédiaire</span>
+          <p>CRUD, formulaires, bases de données.</p>
+        </div>
+      </div>
+
+      <div class="timeline-block">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Git / GitHub</h3>
+          <span class="level beginner">Débutant</span>
+          <p>Gestion de versions, dépôts, GitHub Pages.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROFIL PRO -->
+  <section id="profil-pro" data-aos="fade-up">
+    <h2>Profil professionnel</h2>
+
+    <p class="profil-text">
+      Étudiant en informatique (option SLAM), motivé par le développement web et logiciel.
+      À la recherche d’un <strong>stage / alternance</strong> pour renforcer mes compétences
+      et participer à des projets concrets en équipe.
+    </p>
+
+    <div class="pro-links">
+      <a href="https://github.com/CHRIS967551/mon-portfolio" target="_blank" class="btn-pro">
+        GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/pierre-ndiaye-9b6b46329/" target="_blank" class="btn-pro">
+        LinkedIn
+      </a>
+
+      <a href="CV-Chris.pdf" download class="btn-pro btn-cv">
+        Télécharger mon CV
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Me contacter</h2>
+    <p>
+      Intéressé par mon profil ?  
+      N’hésitez pas à me contacter pour échanger.
+    </p>
+
+    <form>
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <footer>© 2025 Chris — Portfolio SLAM</footer>
+  </section>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
