@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris — Développeur Web & SLAM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BOUTON MODE SOMBRE -->
+  <button id="mode-toggle" aria-label="Changer le thème">
+    <span class="icon-sun">☀</span>
+    <span class="icon-moon">☾</span>
+  </button>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">Chris<span>.</span></div>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="CV-Chris.pdf" download class="nav-cv">CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="accueil">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag">Disponible pour alternance</div>
+      <img src="Images/logo.png" alt="Logo Chris" class="hero-logo">
+      <h1 id="typewriter"></h1>
+      <p class="hero-sub">Étudiant BTS SIO option SLAM · Passionné par le développement web & logiciel</p>
+      <div class="hero-cta">
+        <a href="#projets" class="btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn-outline">Me contacter</a>
+      </div>
+      <div class="hero-scroll">
+        <span>Défiler</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="apropos">
+    <div class="section-label">01 — À propos</div>
+    <div class="apropos-grid">
+      <div class="apropos-img-wrap">
+        <img src="Images/profile.jpg" alt="Photo de Chris" class="apropos-photo">
+        <div class="apropos-img-deco"></div>
+      </div>
+      <div class="apropos-text">
+        <h2>Je suis <span>Chris</span>,<br>développeur en formation.</h2>
+        <p>
+          Étudiant en <strong>BTS SIO option SLAM</strong> à l'ICFA Campus Saint-François de Montpellier,
+          je me spécialise dans le développement web et logiciel. Curieux et rigoureux,
+          j'aime transformer des idées en applications concrètes et fonctionnelles.
+        </p>
+        <p>
+          En alternance, je contribue à des projets réels : création de landing pages,
+          développement d'outils de gestion automatisée, et administration de systèmes.
+        </p>
+        <div class="apropos-stats">
+          <div class="stat">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Projets réalisés</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Ans de formation</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+        </div>
+        <a href="CV-Chris.pdf" download class="btn-primary">Télécharger mon CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets">
+    <div class="section-label">02 — Projets</div>
+    <h2 class="section-title">Ce que j'ai réalisé</h2>
+    <p class="section-sub">Des projets concrets développés en formation et en alternance.</p>
+
+    <div class="projets-grid">
+
+      <!-- PROJET 1 — Planning -->
+      <div class="projet-card featured">
+        <div class="projet-images">
+          <img src="Images/planning-1.jpg" alt="Planning automatisé">
+          <img src="Images/planning-2.jpg" alt="Planning automatisé détail">
+        </div>
+        <div class="projet-content">
+          <div class="projet-header">
+            <span class="projet-num">01</span>
+            <span class="projet-badge en-cours">En cours</span>
+          </div>
+          <h3>Planning automatisé — ICFA</h3>
+          <p class="projet-desc">
+            Outil web complet développé en alternance pour automatiser la gestion
+            des plannings de l'école ICFA Campus Saint-François. L'application
+            importe des fichiers CSV d'emplois du temps, attribue automatiquement
+            les salles selon les effectifs et l'accessibilité, et affiche le planning
+            en temps réel sur un écran TV.
+          </p>
+          <div class="projet-details">
+            <div class="detail-block">
+              <h4>Fonctionnalités clés</h4>
+              <ul>
+                <li>Import CSV multi-formations (MCO, NDRC, SIO, SP3S...)</li>
+                <li>Attribution automatique des salles selon capacité & accessibilité PMR</li>
+                <li>Interface admin sécurisée (login + verrouillage)</li>
+                <li>Affichage TV plein écran avec animation anniversaires</li>
+                <li>Gestion multi-années scolaires</li>
+                <li>Déploiement sur Raspberry Pi avec Docker + Nginx</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <h4>Stack technique</h4>
+              <div class="tech-tags">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>Gunicorn</span>
+                <span>Docker</span>
+                <span>Nginx</span>
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+                <span>JSON/CSV</span>
+                <span>Raspberry Pi</span>
+              </div>
+            </div>
+          </div>
+          <div class="projet-links">
+            <a href="https://github.com/CHRIS967551/planning-automatise" target="_blank" class="btn-outline-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJET 2 — Landing page -->
+      <div class="projet-card">
+        <div class="projet-images">
+          <img src="Images/landing-wordpress-1.jpg" alt="Landing page WordPress">
+          <img src="Images/landing-wordpress-2.jpg" alt="Landing page WordPress détail">
+        </div>
+        <div class="projet-content">
+          <div class="projet-header">
+            <span class="projet-num">02</span>
+            <span class="projet-badge termine">Terminé</span>
+          </div>
+          <h3>Landing page — Rentrée décalée ICFA</h3>
+          <p class="projet-desc">
+            Création d'une landing page professionnelle pour promouvoir les inscriptions
+            à la rentrée décalée de l'ICFA. Page conçue pour maximiser les conversions
+            avec un formulaire d'inscription intégré, une présentation claire des formations
+            et une navigation fluide.
+          </p>
+          <div class="projet-details">
+            <div class="detail-block">
+              <h4>Ce que j'ai fait</h4>
+              <ul>
+                <li>Conception et intégration de la page avec WordPress</li>
+                <li>Personnalisation avancée avec HTML & CSS custom</li>
+                <li>Formulaire de contact & inscription intégré</li>
+                <li>Optimisation mobile (design responsive)</li>
+                <li>Mise en ligne et tests de compatibilité navigateurs</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <h4>Stack technique</h4>
+              <div class="tech-tags">
+                <span>WordPress</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Elementor</span>
+                <span>PHP</span>
+              </div>
+            </div>
+          </div>
+          <div class="projet-links">
+            <a href="https://www.landing.icfa.fr/candidature-rentree-decalee-2/" target="_blank" class="btn-outline-sm">
+              Voir le site →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJET 3 — Unité centrale -->
+      <div class="projet-card">
+        <div class="projet-images">
+          <img src="Images/projet1.jpg" alt="Unité centrale">
+          <img src="Images/imagescarte-mere.jpg" alt="Carte mère">
+        </div>
+        <div class="projet-content">
+          <div class="projet-header">
+            <span class="projet-num">03</span>
+            <span class="projet-badge termine">Terminé</span>
+          </div>
+          <h3>Diagnostic matériel — Unité centrale</h3>
+          <p class="projet-desc">
+            Projet technique de diagnostic et d'analyse de composants matériels d'un poste
+            informatique. Identification, test et documentation des éléments internes :
+            carte mère, mémoire RAM, processeur et périphériques de stockage.
+          </p>
+          <div class="projet-details">
+            <div class="detail-block">
+              <h4>Compétences mobilisées</h4>
+              <ul>
+                <li>Démontage et remontage d'une unité centrale</li>
+                <li>Identification des composants matériels</li>
+                <li>Tests de diagnostic (RAM, disque dur, carte mère)</li>
+                <li>Rédaction d'un rapport technique détaillé</li>
+                <li>Dépannage et résolution de pannes</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <h4>Outils utilisés</h4>
+              <div class="tech-tags">
+                <span>Hardware</span>
+                <span>Memtest86</span>
+                <span>CrystalDisk</span>
+                <span>Windows</span>
+                <span>Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section id="competences">
+    <div class="section-label">03 — Compétences</div>
+    <h2 class="section-title">Mon profil technique</h2>
+
+    <div class="competences-grid">
+
+      <div class="competence-group">
+        <h3>Développement Web</h3>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info"><span>HTML / CSS</span><span class="level advanced">Avancé</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>JavaScript</span><span class="level intermediate">Intermédiaire</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>PHP / MySQL</span><span class="level intermediate">Intermédiaire</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:55%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>WordPress</span><span class="level advanced">Avancé</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="competence-group">
+        <h3>Développement Backend</h3>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info"><span>Python / Flask</span><span class="level intermediate">Intermédiaire</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>SQL / JSON</span><span class="level intermediate">Intermédiaire</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>API REST</span><span class="level beginner">Débutant</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:35%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="competence-group">
+        <h3>Outils & Infrastructure</h3>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info"><span>Git / GitHub</span><span class="level intermediate">Intermédiaire</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:55%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Docker</span><span class="level beginner">Débutant</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:30%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Linux / Raspberry Pi</span><span class="level beginner">Débutant</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:35%"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROFIL PRO -->
+  <section id="profil-pro">
+    <div class="section-label">04 — Profil</div>
+    <div class="profil-wrap">
+      <h2>À la recherche d'une <span>alternance</span></h2>
+      <p>
+        Étudiant en BTS SIO option SLAM, je suis motivé par le développement web et logiciel.
+        Je cherche une alternance pour renforcer mes compétences et contribuer à des projets
+        concrets au sein d'une équipe dynamique.
+      </p>
+      <div class="pro-links">
+        <a href="https://github.com/CHRIS967551" target="_blank" class="btn-primary">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/pierre-ndiaye-9b6b46329/" target="_blank" class="btn-outline">
+          LinkedIn
+        </a>
+        <a href="CV-Chris.pdf" download class="btn-cv">
+          Télécharger mon CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">05 — Contact</div>
+    <h2 class="section-title">Travaillons ensemble</h2>
+    <p class="section-sub">Vous avez un projet ou une opportunité ? Écrivez-moi.</p>
+
+    <form class="contact-form" id="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Votre nom</label>
+          <input type="text" placeholder="Jean Dupont" required>
+        </div>
+        <div class="form-group">
+          <label>Votre email</label>
+          <input type="email" placeholder="jean@exemple.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Sujet</label>
+        <input type="text" placeholder="Proposition d'alternance, question...">
+      </div>
+      <div class="form-group">
+        <label>Votre message</label>
+        <textarea rows="5" placeholder="Bonjour Chris, je souhaite..." required></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Envoyer le message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Chris · BTS SIO SLAM · Montpellier</p>
+    <div class="footer-links">
+      <a href="https://github.com/CHRIS967551" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pierre-ndiaye-9b6b46329/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
