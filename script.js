@@ -31,10 +31,10 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
 // TYPEWRITER
 const phrases = [
-  'Développeur Web ',
-  'Étudiant BTS SIO SLAM ',
-  'Passionné par le code ',
-  'En recherche d\'alternance '
+  'Developpeur Web',
+  'Etudiant BTS SIO SLAM',
+  'Passionne par le code',
+  'En recherche d\'alternance'
 ];
 
 let i = 0, j = 0, deleting = false;
@@ -118,7 +118,7 @@ document.querySelectorAll('.projet-card, .competence-group, .apropos-grid').forE
 document.getElementById('contact-form')?.addEventListener('submit', (e) => {
   e.preventDefault();
   const btn = e.target.querySelector('button');
-  btn.textContent = '✓ Message envoyé !';
+  btn.textContent = 'Message envoye !';
   btn.style.background = '#16a34a';
   setTimeout(() => {
     btn.textContent = 'Envoyer le message';
