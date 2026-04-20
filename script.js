@@ -31,10 +31,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
 // TYPEWRITER
 const phrases = [
-  'Developpeur Web',
-  'Etudiant BTS SIO SLAM',
-  'Passionne par le code',
-  'En recherche d\'alternance'
+  'Bienvenue sur mon portfolio'
 ];
 
 let i = 0, j = 0, deleting = false;
