@@ -873,3 +873,221 @@ footer {
   .apropos-stats { gap: 24px; }
   .projet-images { grid-template-columns: 1fr; grid-template-rows: 160px 100px; }
 }
+
+/* =====================
+   NOUVELLES CARTES PROJETS
+===================== */
+.projets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.projet-card {
+  background: var(--card-color);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: white;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 340px;
+}
+
+.projet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.projet-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projet-card h3 {
+  font-size: 1.5rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  color: white;
+}
+
+.projet-card .projet-desc {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.projet-card .projet-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.1em;
+}
+
+.projet-card .projet-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.projet-card .projet-badge.en-cours {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.projet-card .projet-badge.termine {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.projet-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projet-meta span {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.btn-plus {
+  background: white;
+  color: var(--card-color);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: auto;
+}
+
+.btn-plus:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =====================
+   MODALS
+===================== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid var(--border);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--bg2);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover { background: var(--border); }
+
+.modal-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+  padding-right: 40px;
+}
+
+.modal-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.modal-images img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 160px;
+}
+
+.modal-detail h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-soft);
+  margin-bottom: 12px;
+}
+
+.modal-detail ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.modal-detail ul li {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.modal-detail ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+/* RESPONSIVE CARTES */
+@media (max-width: 900px) {
+  .projets-grid {
+    grid-template-columns: 1fr;
+  }
+}
