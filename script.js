@@ -31,10 +31,10 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
 // TYPEWRITER
 const phrases = [
-  'Développeur Web 🌐',
-  'Étudiant BTS SIO SLAM 🎓',
-  'Passionné par le code 💻',
-  'En recherche d\'alternance 🚀'
+  'Développeur Web ',
+  'Étudiant BTS SIO SLAM ',
+  'Passionné par le code ',
+  'En recherche d\'alternance '
 ];
 
 let i = 0, j = 0, deleting = false;
