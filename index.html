@@ -10,13 +10,11 @@
 </head>
 <body>
 
-  <!-- BOUTON MODE SOMBRE -->
   <button id="mode-toggle" aria-label="Changer le thème">
     <span class="icon-sun">☀</span>
     <span class="icon-moon">☾</span>
   </button>
 
-  <!-- NAVIGATION -->
   <nav class="navbar" id="navbar">
     <div class="nav-brand">Chris<span>.</span></div>
     <div class="burger" id="burger">
@@ -76,7 +74,7 @@
         </p>
         <div class="apropos-stats">
           <div class="stat">
-            <span class="stat-num">3</span>
+            <span class="stat-num">4</span>
             <span class="stat-label">Projets réalisés</span>
           </div>
           <div class="stat">
@@ -93,221 +91,205 @@
     </div>
   </section>
 
-<!-- PROJETS -->
-<section id="projets">
-  <div class="section-label">02 — Projets</div>
-  <h2 class="section-title">Ce que j'ai réalisé</h2>
-  <p class="section-sub">Des projets concrets développés en formation et en alternance.</p>
+  <!-- PROJETS -->
+  <section id="projets">
+    <div class="section-label">02 — Projets</div>
+    <h2 class="section-title">Ce que j'ai réalisé</h2>
+    <p class="section-sub">Des projets concrets développés en formation et en alternance.</p>
 
-  <div class="projets-grid">
+    <div class="projets-grid">
 
-    <!-- PROJET 1 -->
-    <div class="projet-card" style="--card-color: #1e3a8a;">
-      <div class="projet-card-top">
-        <span class="projet-badge termine">Terminé</span>
-        <span class="projet-num">01</span>
-      </div>
-      <h3>Planning automatisé</h3>
-      <p class="projet-desc">Outil web pour automatiser la gestion des plannings de l'ICFA. Import CSV, attribution de salles, affichage TV temps réel.</p>
-      <div class="projet-meta">
-        <span>Python / Flask</span>
-        <span>Docker</span>
-        <span>Raspberry Pi</span>
-      </div>
-      <button class="btn-plus" onclick="openModal('modal1')">+ Voir les détails</button>
-    </div>
-
-    <!-- PROJET 2 -->
-    <div class="projet-card" style="--card-color: #0f766e;">
-      <div class="projet-card-top">
-        <span class="projet-badge termine">Terminé</span>
-        <span class="projet-num">02</span>
-      </div>
-      <h3>Landing page ICFA</h3>
-      <p class="projet-desc">Landing page professionnelle pour les inscriptions à la rentrée décalée de l'ICFA. Formulaire intégré, responsive.</p>
-      <div class="projet-meta">
-        <span>WordPress</span>
-        <span>HTML / CSS</span>
-        <span>Elementor</span>
-      </div>
-      <button class="btn-plus" onclick="openModal('modal2')">+ Voir les détails</button>
-    </div>
-
-    <!-- PROJET 3 -->
-    <div class="projet-card" style="--card-color: #7c3aed;">
-      <div class="projet-card-top">
-        <span class="projet-badge termine">Terminé</span>
-        <span class="projet-num">03</span>
-      </div>
-      <h3>Diagnostic matériel</h3>
-      <p class="projet-desc">Démontage, test et documentation d'une unité centrale. Identification des composants et rapport de diagnostic.</p>
-      <div class="projet-meta">
-        <span>Hardware</span>
-        <span>Memtest86</span>
-        <span>Linux</span>
-      </div>
-      <button class="btn-plus" onclick="openModal('modal3')">+ Voir les détails</button>
-    </div>
-
-  </div>
-
-
-  <!-- MODAL 4 -->
-<div class="modal" id="modal4">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal('modal4')">✕</button>
-    <h3>Site vitrine — Artisan Ébéniste</h3>
-    <div class="modal-detail">
-      <h4>Description</h4>
-      <p style="color:var(--text-soft); font-size:0.9rem; line-height:1.7; margin-bottom:20px;">
-        Site web vitrine développé en classe pour un artisan ébéniste. Conçu entièrement à la main sans CMS, avec une architecture MVC simplifiée et une base de données MySQL.
-      </p>
-      <h4>Pages développées</h4>
-      <ul>
-        <li>Accueil avec dernier témoignage récupéré dynamiquement</li>
-        <li>Galerie avec filtre par catégorie (Tables, Restauration, Rangements)</li>
-        <li>Page services et présentation de l'activité</li>
-        <li>Témoignages clients avec note moyenne automatique</li>
-        <li>Formulaire de contact avec validation et enregistrement en base</li>
-        <li>Page mentions légales conforme RGPD</li>
-      </ul>
-      <h4 style="margin-top:16px;">Sécurité</h4>
-      <ul>
-        <li>Requêtes préparées PDO contre les injections SQL</li>
-        <li>Validation des données avec htmlspecialchars() et filter_var()</li>
-        <li>Site responsive adapté mobile, tablette et desktop</li>
-      </ul>
-      <div class="tech-tags" style="margin-top:20px;">
-        <span>HTML5</span><span>CSS3</span><span>PHP</span>
-        <span>MySQL</span><span>JavaScript</span><span>WAMP</span><span>PDO</span>
-      </div>
-    </div>
-  </div>
-</div>
-  <!-- MODAL 1 -->
-  <div class="modal" id="modal1">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal('modal1')">✕</button>
-      <h3>Planning automatisé — ICFA</h3>
-      <div class="modal-images">
-        <img src="Images/planning-1.jpg" alt="Planning 1">
-        <img src="Images/planning-2.jpg" alt="Planning 2">
-        <img src="Images/planning-3.jpg" alt="Planning 3">
-        <img src="Images/planning-4.jpg" alt="Planning 4">
-    </div>
-      <div class="modal-detail">
-        <h4>Fonctionnalités</h4>
-        <ul>
-          <li>Import CSV multi-formations (MCO, NDRC, SIO...)</li>
-          <li>Attribution automatique des salles selon capacité et accessibilité PMR</li>
-          <li>Interface admin sécurisée avec verrouillage</li>
-          <li>Affichage TV plein écran avec animation anniversaires</li>
-          <li>Déploiement sur Raspberry Pi avec Docker + Nginx</li>
-        </ul>
-        <div class="tech-tags">
-          <span>Python</span><span>Flask</span><span>Docker</span>
-          <span>Nginx</span><span>Raspberry Pi</span><span>JavaScript</span>
+      <!-- PROJET 1 -->
+      <div class="projet-card" style="--card-color: #1e3a8a;">
+        <div class="projet-card-top">
+          <span class="projet-badge termine">Terminé</span>
+          <span class="projet-num">01</span>
         </div>
-        <a href="https://github.com/CHRIS967551/planning-automatise" target="_blank" class="btn-outline-sm">Voir sur GitHub →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL 2 -->
-  <div class="modal" id="modal2">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal('modal2')">✕</button>
-      <h3>Landing page — Rentrée décalée ICFA</h3>
-      <div class="modal-images">
-        <img src="Images/landing-wordpress-1.jpg" alt="Landing 1">
-        <img src="Images/landing-wordpress-2.jpg" alt="Landing 2">
-      </div>
-      <div class="modal-detail">
-        <h4>Ce que j'ai fait</h4>
-        <ul>
-          <li>Conception et intégration avec WordPress</li>
-          <li>Personnalisation HTML & CSS custom</li>
-          <li>Formulaire d'inscription intégré</li>
-          <li>Design responsive optimisé mobile</li>
-          <li>Mise en ligne et tests navigateurs</li>
-        </ul>
-        <div class="tech-tags">
-          <span>WordPress</span><span>HTML</span><span>CSS</span>
-          <span>Elementor</span><span>PHP</span>
+        <h3>Planning automatisé</h3>
+        <p class="projet-desc">Outil web pour automatiser la gestion des plannings de l'ICFA. Import CSV, attribution de salles, affichage TV temps réel.</p>
+        <div class="projet-meta">
+          <span>Python / Flask</span>
+          <span>Docker</span>
+          <span>Raspberry Pi</span>
         </div>
-        <a href="https://www.landing.icfa.fr/candidature-rentree-decalee-2/" target="_blank" class="btn-outline-sm">Voir le site →</a>
+        <button class="btn-plus" onclick="openModal('modal1')">+ Voir les détails</button>
       </div>
-    </div>
-  </div>
 
-  <!-- MODAL 3 -->
-  <div class="modal" id="modal3">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeModal('modal3')">✕</button>
-      <h3>Diagnostic matériel — Unité centrale</h3>
-      <div class="modal-images">
-        <img src="Images/projet1.jpg" alt="Unité centrale">
-        <img src="Images/imagescarte-mere.jpg" alt="Carte mère">
-        <img src="Images/imagesram-image.jpg" alt="RAM">
+      <!-- PROJET 2 -->
+      <div class="projet-card" style="--card-color: #0f766e;">
+        <div class="projet-card-top">
+          <span class="projet-badge termine">Terminé</span>
+          <span class="projet-num">02</span>
+        </div>
+        <h3>Landing page ICFA</h3>
+        <p class="projet-desc">Landing page professionnelle pour les inscriptions à la rentrée décalée de l'ICFA. Formulaire intégré, responsive.</p>
+        <div class="projet-meta">
+          <span>WordPress</span>
+          <span>HTML / CSS</span>
+          <span>Elementor</span>
+        </div>
+        <button class="btn-plus" onclick="openModal('modal2')">+ Voir les détails</button>
       </div>
-      <div class="modal-detail">
-        <h4>Compétences mobilisées</h4>
-        <ul>
-          <li>Démontage et remontage d'une unité centrale</li>
-          <li>Identification des composants matériels</li>
-          <li>Tests de diagnostic RAM, disque dur, carte mère</li>
-          <li>Rédaction d'un rapport technique détaillé</li>
-          <li>Dépannage et résolution de pannes</li>
-        </ul>
-        <div class="tech-tags">
-          <span>Hardware</span><span>Memtest86</span>
-          <span>CrystalDisk</span><span>Linux</span>
+
+      <!-- PROJET 3 -->
+      <div class="projet-card" style="--card-color: #7c3aed;">
+        <div class="projet-card-top">
+          <span class="projet-badge termine">Terminé</span>
+          <span class="projet-num">03</span>
+        </div>
+        <h3>Diagnostic matériel</h3>
+        <p class="projet-desc">Démontage, test et documentation d'une unité centrale. Identification des composants et rapport de diagnostic.</p>
+        <div class="projet-meta">
+          <span>Hardware</span>
+          <span>Memtest86</span>
+          <span>Linux</span>
+        </div>
+        <button class="btn-plus" onclick="openModal('modal3')">+ Voir les détails</button>
+      </div>
+
+      <!-- PROJET 4 -->
+      <div class="projet-card" style="--card-color: #0369a1;">
+        <div class="projet-card-top">
+          <span class="projet-badge termine">Terminé</span>
+          <span class="projet-num">04</span>
+        </div>
+        <h3>Site vitrine — Ébéniste</h3>
+        <p class="projet-desc">Site web vitrine pour un artisan ébéniste. Galerie de réalisations, formulaire de contact, témoignages clients et gestion dynamique via base de données.</p>
+        <div class="projet-meta">
+          <span>PHP</span>
+          <span>MySQL</span>
+          <span>JavaScript</span>
+          <span>WAMP</span>
+        </div>
+        <button class="btn-plus" onclick="openModal('modal4')">+ Voir les détails</button>
+      </div>
+
+    </div>
+
+    <!-- MODAL 1 -->
+    <div class="modal" id="modal1">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('modal1')">✕</button>
+        <h3>Planning automatisé — ICFA</h3>
+        <div class="modal-images">
+          <img src="Images/planning-1.jpg" alt="Planning 1">
+          <img src="Images/planning-2.jpg" alt="Planning 2">
+          <img src="Images/planning-3.jpg" alt="Planning 3">
+          <img src="Images/planning-4.jpg" alt="Planning 4">
+        </div>
+        <div class="modal-detail">
+          <h4>Fonctionnalités</h4>
+          <ul>
+            <li>Import CSV multi-formations (MCO, NDRC, SIO...)</li>
+            <li>Attribution automatique des salles selon capacité et accessibilité PMR</li>
+            <li>Interface admin sécurisée avec verrouillage</li>
+            <li>Affichage TV plein écran avec animation anniversaires</li>
+            <li>Déploiement sur Raspberry Pi avec Docker + Nginx</li>
+          </ul>
+          <div class="tech-tags">
+            <span>Python</span><span>Flask</span><span>Docker</span>
+            <span>Nginx</span><span>Raspberry Pi</span><span>JavaScript</span>
+          </div>
+          <a href="https://github.com/CHRIS967551/planning-automatise" target="_blank" class="btn-outline-sm">Voir sur GitHub →</a>
         </div>
       </div>
     </div>
-  </div>
 
-<!-- MODAL 4 -->
-<div class="modal" id="modal4">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal('modal4')">✕</button>
-    <h3>Site vitrine — Artisan Ébéniste</h3>
-    <div class="modal-images">
-      <img src="Images/ebeniste-1.jpg" alt="Site ebeniste 1">
-      <img src="Images/ebeniste-2.jpg" alt="Site ebeniste 2">
-      <img src="Images/ebeniste-3.jpg" alt="Site ebeniste 3">
-      <img src="Images/ebeniste-4.jpg" alt="Site ebeniste 4">
-      <img src="Images/ebeniste-5.jpg" alt="Site ebeniste 5">
-    </div>
-    <div class="modal-detail">
-      <h4>Description</h4>
-      <p style="color:var(--text-soft); font-size:0.9rem; line-height:1.7; margin-bottom:20px;">
-        Site web vitrine développé en classe pour un artisan ébéniste. Conçu entièrement à la main sans CMS, avec une architecture MVC simplifiée et une base de données MySQL.
-      </p>
-      <h4>Pages développées</h4>
-      <ul>
-        <li>Accueil avec dernier témoignage récupéré dynamiquement</li>
-        <li>Galerie avec filtre par catégorie (Tables, Restauration, Rangements)</li>
-        <li>Page services et présentation de l'activité</li>
-        <li>Témoignages clients avec note moyenne automatique</li>
-        <li>Formulaire de contact avec validation et enregistrement en base</li>
-        <li>Page mentions légales conforme RGPD</li>
-      </ul>
-      <h4 style="margin-top:16px;">Sécurité</h4>
-      <ul>
-        <li>Requêtes préparées PDO contre les injections SQL</li>
-        <li>Validation des données avec htmlspecialchars() et filter_var()</li>
-        <li>Site responsive adapté mobile, tablette et desktop</li>
-      </ul>
-      <div class="tech-tags" style="margin-top:20px;">
-        <span>HTML5</span><span>CSS3</span><span>PHP</span>
-        <span>MySQL</span><span>JavaScript</span><span>WAMP</span><span>PDO</span>
+    <!-- MODAL 2 -->
+    <div class="modal" id="modal2">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('modal2')">✕</button>
+        <h3>Landing page — Rentrée décalée ICFA</h3>
+        <div class="modal-images">
+          <img src="Images/landing-wordpress-1.jpg" alt="Landing 1">
+          <img src="Images/landing-wordpress-2.jpg" alt="Landing 2">
+        </div>
+        <div class="modal-detail">
+          <h4>Ce que j'ai fait</h4>
+          <ul>
+            <li>Conception et intégration avec WordPress</li>
+            <li>Personnalisation HTML & CSS custom</li>
+            <li>Formulaire d'inscription intégré</li>
+            <li>Design responsive optimisé mobile</li>
+            <li>Mise en ligne et tests navigateurs</li>
+          </ul>
+          <div class="tech-tags">
+            <span>WordPress</span><span>HTML</span><span>CSS</span>
+            <span>Elementor</span><span>PHP</span>
+          </div>
+          <a href="https://www.landing.icfa.fr/candidature-rentree-decalee-2/" target="_blank" class="btn-outline-sm">Voir le site →</a>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-</section>
+    <!-- MODAL 3 -->
+    <div class="modal" id="modal3">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('modal3')">✕</button>
+        <h3>Diagnostic matériel — Unité centrale</h3>
+        <div class="modal-images">
+          <img src="Images/projet1.jpg" alt="Unité centrale">
+          <img src="Images/imagescarte-mere.jpg" alt="Carte mère">
+          <img src="Images/imagesram-image.jpg" alt="RAM">
+        </div>
+        <div class="modal-detail">
+          <h4>Compétences mobilisées</h4>
+          <ul>
+            <li>Démontage et remontage d'une unité centrale</li>
+            <li>Identification des composants matériels</li>
+            <li>Tests de diagnostic RAM, disque dur, carte mère</li>
+            <li>Rédaction d'un rapport technique détaillé</li>
+            <li>Dépannage et résolution de pannes</li>
+          </ul>
+          <div class="tech-tags">
+            <span>Hardware</span><span>Memtest86</span>
+            <span>CrystalDisk</span><span>Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 4 -->
+    <div class="modal" id="modal4">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('modal4')">✕</button>
+        <h3>Site vitrine — Artisan Ébéniste</h3>
+        <div class="modal-images">
+          <img src="Images/ebeniste-1.jpg" alt="Site ebeniste 1">
+          <img src="Images/ebeniste-2.jpg" alt="Site ebeniste 2">
+          <img src="Images/ebeniste-3.jpg" alt="Site ebeniste 3">
+          <img src="Images/ebeniste-4.jpg" alt="Site ebeniste 4">
+          <img src="Images/ebeniste-5.jpg" alt="Site ebeniste 5">
+        </div>
+        <div class="modal-detail">
+          <h4>Description</h4>
+          <p style="color:var(--text-soft); font-size:0.9rem; line-height:1.7; margin-bottom:20px;">
+            Site web vitrine développé en classe pour un artisan ébéniste. Conçu entièrement à la main sans CMS, avec une architecture MVC simplifiée et une base de données MySQL.
+          </p>
+          <h4>Pages développées</h4>
+          <ul>
+            <li>Accueil avec dernier témoignage récupéré dynamiquement</li>
+            <li>Galerie avec filtre par catégorie (Tables, Restauration, Rangements)</li>
+            <li>Page services et présentation de l'activité</li>
+            <li>Témoignages clients avec note moyenne automatique</li>
+            <li>Formulaire de contact avec validation et enregistrement en base</li>
+            <li>Page mentions légales conforme RGPD</li>
+          </ul>
+          <h4 style="margin-top:16px;">Sécurité</h4>
+          <ul>
+            <li>Requêtes préparées PDO contre les injections SQL</li>
+            <li>Validation des données avec htmlspecialchars() et filter_var()</li>
+            <li>Site responsive adapté mobile, tablette et desktop</li>
+          </ul>
+          <div class="tech-tags" style="margin-top:20px;">
+            <span>HTML5</span><span>CSS3</span><span>PHP</span>
+            <span>MySQL</span><span>JavaScript</span><span>WAMP</span><span>PDO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
   <!-- COMPÉTENCES -->
   <section id="competences">
@@ -388,15 +370,9 @@
         concrets au sein d'une équipe dynamique.
       </p>
       <div class="pro-links">
-        <a href="https://github.com/CHRIS967551" target="_blank" class="btn-primary">
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/pierre-ndiaye-9b6b46329/" target="_blank" class="btn-outline">
-          LinkedIn
-        </a>
-        <a href="CV-Chris.pdf" download class="btn-cv">
-          Télécharger mon CV
-        </a>
+        <a href="https://github.com/CHRIS967551" target="_blank" class="btn-primary">GitHub</a>
+        <a href="https://www.linkedin.com/in/pierre-ndiaye-9b6b46329/" target="_blank" class="btn-outline">LinkedIn</a>
+        <a href="CV-Chris.pdf" download class="btn-cv">Télécharger mon CV</a>
       </div>
     </div>
   </section>
